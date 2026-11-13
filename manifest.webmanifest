@@ -1,0 +1,17 @@
+{
+  "name": "ViralClip AI",
+  "short_name": "ViralClip",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090d18",
+  "theme_color": "#090d18",
+  "description": "Estudio de clips con inteligencia artificial",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

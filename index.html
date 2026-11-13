@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090d18">
+<meta name="description" content="ViralClip AI convierte videos autorizados en clips listos para redes sociales.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<title>ViralClip AI</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brandmark">▶</span><span>ViralClip <b>AI</b></span></a>
+  <button class="avatar" id="accountBtn" aria-label="Cuenta">VC</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="pulse"></span> TU ESTUDIO DE CLIPS CON IA</div>
+    <h1>Un video.<br><span class="gradient">Muchos momentos virales.</span></h1>
+    <p class="lead">Convierte tus videos en clips verticales listos para compartir.</p>
+  </section>
+
+  <section class="panel" id="create">
+    <div class="section-head">
+      <div><span class="step">01</span><h2>Empieza con tu video</h2></div>
+      <span class="tag">NUEVO PROYECTO</span>
+    </div>
+    <label for="videoUrl">Enlace de YouTube</label>
+    <div class="urlrow">
+      <input id="videoUrl" type="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="url">
+      <button class="paste" id="pasteBtn" type="button">Pegar</button>
+    </div>
+    <p class="hint">Usa enlaces de videos propios o para los que tengas autorización de procesamiento.</p>
+    <div class="or"><span>O SUBE UN VIDEO PROPIO</span></div>
+    <label class="upload" for="videoFile">
+      <span class="uploadicon">↑</span>
+      <strong>Seleccionar video</strong>
+      <small>MP4, MOV o WebM · El límite dependerá del dispositivo y del servicio conectado</small>
+      <input id="videoFile" type="file" accept="video/mp4,video/quicktime,video/webm,video/*" hidden>
+    </label>
+    <div id="fileInfo" class="fileinfo" hidden></div>
+    <div class="settings">
+      <div>
+        <label for="clipCount">Cantidad de clips</label>
+        <select id="clipCount"><option>3</option><option selected>5</option><option>10</option><option>15</option></select>
+      </div>
+      <div>
+        <label for="format">Formato</label>
+        <select id="format"><option value="9:16">Vertical 9:16</option><option value="1:1">Cuadrado 1:1</option><option value="16:9">Horizontal 16:9</option></select>
+      </div>
+    </div>
+    <button class="primary" id="startBtn">Preparar mis clips <span>→</span></button>
+    <p class="disclaimer">La generación automática con IA se habilitará al conectar el motor de procesamiento. Esta versión inicial prepara tu proyecto y valida el material.</p>
+    <div id="notice" class="notice" role="status" hidden></div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><span>✦</span><div><b>Momentos destacados</b><small>Detección inteligente al conectar IA</small></div></div>
+    <div class="feature"><span>▤</span><div><b>Subtítulos automáticos</b><small>Listos para Shorts, Reels y TikTok</small></div></div>
+    <div class="feature"><span>▣</span><div><b>Clips verticales</b><small>Encuadre para redes sociales</small></div></div>
+  </section>
+
+  <section class="panel plans" id="plans">
+    <div class="section-head"><div><span class="step">02</span><h2>Elige tu plan</h2></div><span class="tag">PRECIOS INICIALES</span></div>
+    <div class="plan">
+      <div><b>Starter</b><small>Para comenzar</small></div><strong>US$4.99<small>/mes</small></strong>
+      <p>20 clips mensuales</p>
+    </div>
+    <div class="plan featured">
+      <div><b>Pro</b><small>Para creadores frecuentes</small></div><strong>US$9.99<small>/mes</small></strong>
+      <p>100 clips mensuales · Sin marca de agua</p>
+    </div>
+    <div class="plan">
+      <div><b>Premium</b><small>Para uso intensivo</small></div><strong>US$19.99<small>/mes</small></strong>
+      <p>300 clips mensuales · Prioridad</p>
+    </div>
+    <div class="credits"><b>¿Prefieres pagar una sola vez?</b><p>Los paquetes de clips estarán disponibles cuando conectemos el sistema de pagos.</p></div>
+    <p class="disclaimer">Los precios son ilustrativos. Los cobros reales, suscripciones y créditos todavía no están activos.</p>
+  </section>
+  <section class="bottom-note"><span class="brandmark">▶</span><p><b>ViralClip AI</b><br>Tu contenido. Más momentos. Más alcance.</p></section>
+</main>
+<nav class="bottomnav">
+  <a href="#create" class="active">⌂ <span>Crear</span></a>
+  <a href="#plans">◇ <span>Planes</span></a>
+  <button id="historyBtn">▤ <span>Proyectos</span></button>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
